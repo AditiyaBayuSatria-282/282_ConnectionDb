@@ -49,3 +49,11 @@ app.get('/', (req, res, next) => {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+app.get('/', (req, res, next) => {
+  console.log("TEST DATA : ");
+  pool.query('Select * from biodata')
+    .then(testData => {
+      console.log(testData);
+      res.json(testData.rows);
+    });
+});
