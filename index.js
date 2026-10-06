@@ -39,3 +39,13 @@ const pool = new Pool({
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
+// ... kode sebelumnya
+
+app.get('/', (req, res, next) => {
+
+});
+
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
